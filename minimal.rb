@@ -1,6 +1,10 @@
 require 'sinatra';
 
-get '/' do
-  'Minimal Sinatra Hello World!'
+class MyApp < Sinatra::Base
+  get '/' do
+    'Hello World!'
+  end
 end
+
+MyApp.run!
 
