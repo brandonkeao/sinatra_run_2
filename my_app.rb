@@ -1,8 +1,7 @@
 require 'sinatra/base'
 
 class MyApp < Sinatra::Base
-  get '/' do
-    'Hello World from MyApp in separate file!'
-  end
+  set :static, true
+  set :public_dir, File.dirname(__FILE__) + '/static'
 end
 
